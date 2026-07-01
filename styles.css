@@ -394,21 +394,24 @@ h6 {
   top: 100%;
   left: 0;
   right: 0;
-  background: rgba(18, 11, 34, 0.94);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
+  z-index: 200;
+  /* Opaque so page content can't show through, and its own compositing layer
+     (translate3d + isolation) so the 3D flip cards don't render on top of it
+     on iOS/WebKit. */
+  isolation: isolate;
+  background: var(--bg-800);
   border-bottom: 1px solid var(--glass-border);
   padding: 8px 0 28px;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-8px);
+  transform: translate3d(0, -8px, 0);
   transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
 }
 
 .mobile-menu.open {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }
 
 .mobile-menu ul {
@@ -550,11 +553,31 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  /* WebKit doesn't reliably honor backface-visibility here, so we also hide the
+     inactive face with opacity, switched instantly at the 90° midpoint of the
+     0.6s flip (when the card is edge-on and invisible). Robust in every engine. */
+  transition:
+    opacity 0s linear 0.3s,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.flip-front {
+  transform: rotateY(0deg);
+  opacity: 1;
 }
 
 .flip-back {
   transform: rotateY(180deg);
+  opacity: 0;
+}
+
+.flip-card.is-flipped .flip-front {
+  opacity: 0;
+}
+
+.flip-card.is-flipped .flip-back {
+  opacity: 1;
 }
 
 .flip-card:hover .flip-front {

@@ -76,14 +76,50 @@ function initFlipCards() {
       if (back) back.setAttribute('aria-hidden', String(!flipped));
     };
 
-    card.addEventListener('click', () => {
-      setFlipped(!card.classList.contains('is-flipped'));
+    const toggle = () => setFlipped(!card.classList.contains('is-flipped'));
+
+    // Touch handling: some mobile browsers (notably iOS Safari) don't reliably
+    // fire `click` on a non-native control like this <div role="button">. Handle
+    // the tap explicitly, ignoring gestures that are actually scrolls, and call
+    // preventDefault so the browser's synthesized click doesn't double-toggle.
+    let startX = 0;
+    let startY = 0;
+    let moved = false;
+
+    card.addEventListener(
+      'touchstart',
+      (event) => {
+        const t = event.changedTouches[0];
+        startX = t.clientX;
+        startY = t.clientY;
+        moved = false;
+      },
+      { passive: true }
+    );
+
+    card.addEventListener(
+      'touchmove',
+      (event) => {
+        const t = event.changedTouches[0];
+        if (Math.abs(t.clientX - startX) > 10 || Math.abs(t.clientY - startY) > 10) {
+          moved = true;
+        }
+      },
+      { passive: true }
+    );
+
+    card.addEventListener('touchend', (event) => {
+      if (moved) return; // it was a scroll, not a tap
+      event.preventDefault(); // suppress the synthesized click (avoids double toggle)
+      toggle();
     });
+
+    card.addEventListener('click', toggle);
 
     card.addEventListener('keydown', (event) => {
       if (event.key !== 'Enter' && event.key !== ' ' && event.key !== 'Spacebar') return;
       event.preventDefault();
-      setFlipped(!card.classList.contains('is-flipped'));
+      toggle();
     });
   });
 }
@@ -131,18 +167,36 @@ function initStatsCounter() {
     return;
   }
 
+  let started = false;
+  const start = () => {
+    if (started) return;
+    started = true;
+    numbers.forEach((el) => animateStatNumber(el));
+    window.removeEventListener('scroll', onScroll);
+    observer.disconnect();
+  };
+
+  // Fires as soon as any part of the section reaches the lower portion of the
+  // viewport — more reliable on mobile than requiring a 30% intersection ratio.
   const observer = new IntersectionObserver(
-    (entries, obs) => {
+    (entries) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        numbers.forEach((el) => animateStatNumber(el));
-        obs.unobserve(entry.target);
+        if (entry.isIntersecting) start();
       });
     },
-    { threshold: 0.3 }
+    { threshold: 0, rootMargin: '0px 0px -12% 0px' }
   );
-
   observer.observe(section);
+
+  // Fallback: if the observer somehow never fires, a scroll check will.
+  const onScroll = () => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.9 && rect.bottom > 0) start();
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // In case the section is already within view on load.
+  onScroll();
 }
 
 function initScrollReveals() {
