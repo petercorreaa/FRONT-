@@ -1,12 +1,20 @@
 // main.js
 
-document.addEventListener('DOMContentLoaded', () => {
+function init() {
   initStickyHeader();
   initMobileMenu();
   initFlipCards();
   initStatsCounter();
   initScrollReveals();
-});
+}
+
+// As a module script this runs deferred (after the DOM is parsed), so
+// DOMContentLoaded may already have fired — guard for both cases.
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
 
 function initStickyHeader() {
   const header = document.getElementById('siteHeader');
