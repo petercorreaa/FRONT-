@@ -1,9 +1,23 @@
 import { defineConfig } from 'vite';
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
 
-// Plain static site (index.html + styles.css + main.js). No framework/build step
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+// Plain static multi-page site (index + subpages). No framework/build step
 // beyond Vite's dev server and bundler. Root is the project directory.
 export default defineConfig({
   root: '.',
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        plataforma: resolve(__dirname, 'plataforma.html'),
+        asesoramiento: resolve(__dirname, 'asesoramiento.html'),
+        'sobre-nosotros': resolve(__dirname, 'sobre-nosotros.html'),
+      },
+    },
+  },
   server: {
     // Dedicated port for this project so it won't collide with other local Vite apps.
     port: 5180,

@@ -258,8 +258,28 @@ h6 {
 }
 
 .site-header.scrolled {
-  background: rgba(44, 22, 66, 0.86);
-  border-bottom-color: rgba(133, 37, 184, 0.28);
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom-color: rgba(133, 37, 184, 0.15);
+}
+
+/* Nav links and hamburger icon switch to purple on the white scrolled bar.
+   The "Acceder a nuestra plataforma" button (.header-cta / .mobile-cta) is
+   untouched here, so it keeps its normal violet-gradient + white-text look. */
+.site-header.scrolled .nav-desktop a {
+  color: var(--violet-600);
+}
+
+.site-header.scrolled .nav-desktop a:hover,
+.site-header.scrolled .nav-desktop a:focus-visible {
+  color: var(--violet-800);
+}
+
+.site-header.scrolled .hamburger {
+  border-color: rgba(133, 37, 184, 0.35);
+}
+
+.site-header.scrolled .hamburger-line {
+  background: var(--violet-600);
 }
 
 .header-inner {
@@ -774,7 +794,7 @@ h6 {
 }
 
 .proceso-intro {
-  max-width: 640px;
+  max-width: 860px;
   margin-inline: auto;
   padding: 28px 32px;
   border-color: rgba(133, 37, 184, 0.4);
@@ -843,6 +863,14 @@ h6 {
 .proceso-col-title {
   font-size: 1.3rem;
   margin-bottom: 12px;
+}
+
+.proceso-col-title--violet {
+  color: var(--violet-500);
+}
+
+.proceso-col-title--green {
+  color: var(--green-400);
 }
 
 .proceso-col-text {
@@ -1013,6 +1041,285 @@ h6 {
 }
 
 /* --------------------------------------------------------------------------
+   Subpages (Plataforma / Asesoramiento / Sobre Nosotros)
+   -------------------------------------------------------------------------- */
+
+/* Active nav link */
+.nav-desktop a[aria-current="page"],
+.mobile-menu a[aria-current="page"] {
+  color: var(--text-100);
+}
+
+.site-header.scrolled .nav-desktop a[aria-current="page"] {
+  color: var(--violet-800);
+}
+
+/* Page hero */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: 56px 40px;
+  text-align: center;
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  width: min(720px, 100%);
+  height: 380px;
+  transform: translateX(-50%);
+  background: radial-gradient(50% 50% at 50% 40%, rgba(133, 37, 184, 0.4) 0%, rgba(133, 37, 184, 0.12) 45%, transparent 75%);
+  filter: blur(22px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.page-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  margin-bottom: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--violet-500);
+  border: 1px solid rgba(133, 37, 184, 0.4);
+  border-radius: var(--radius-pill);
+  background: rgba(133, 37, 184, 0.08);
+}
+
+.page-eyebrow--green {
+  color: var(--green-400);
+  border-color: rgba(47, 217, 138, 0.4);
+  background: rgba(47, 217, 138, 0.08);
+}
+
+.page-title {
+  font-size: 2.1rem;
+  margin-bottom: 16px;
+}
+
+.page-desc {
+  max-width: 640px;
+  margin-inline: auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-300);
+}
+
+.page-hero .btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+/* Split page hero: content column left-aligned, media column on the right */
+.page-hero--split {
+  text-align: left;
+}
+
+.page-hero--split .page-desc {
+  margin-inline: 0;
+}
+
+.page-hero--split .btn-row {
+  justify-content: flex-start;
+}
+
+.page-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+/* Reserved for the platform image; takes no space until desktop */
+.page-hero-media {
+  display: none;
+  min-height: 320px;
+  border-radius: var(--radius-card);
+}
+
+/* Generic page sections */
+.page-section {
+  padding-block: 40px;
+}
+
+.section-heading {
+  max-width: 720px;
+  margin-inline: auto;
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.section-sub {
+  max-width: 620px;
+  margin-inline: auto;
+  margin-bottom: 32px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-300);
+  text-align: center;
+}
+
+/* Feature cards (3-up) */
+.cards-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.feature-card {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.feature-tag {
+  margin-bottom: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--violet-500);
+}
+
+/* Numbered steps */
+.steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.step {
+  padding: 28px;
+}
+
+.step-num {
+  display: block;
+  margin-bottom: 12px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: var(--violet-500);
+}
+
+.step-num--green {
+  color: var(--green-400);
+}
+
+/* Chips (education / topics) */
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-300);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-pill);
+  background: var(--glass-bg);
+}
+
+/* Wide CTA panel */
+.cta-panel {
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.cta-panel h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.cta-panel p {
+  max-width: 560px;
+  margin-inline: auto;
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+  color: var(--text-300);
+}
+
+/* Trust / fine print */
+.trust-note {
+  max-width: 640px;
+  margin-inline: auto;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--text-500);
+  text-align: center;
+}
+
+.page-section .logo-row {
+  margin-top: 20px;
+}
+
+.proceso-subcard strong {
+  color: var(--text-100);
+  font-weight: 600;
+}
+
+/* Team (Sobre Nosotros) */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 16px;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.team-avatar {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 14px;
+  border-radius: 50%;
+  /* Gray placeholder for member photo */
+  background: linear-gradient(160deg, #565261 0%, #37343f 100%);
+  border: 1px solid var(--glass-border);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.team-name {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-100);
+}
+
+.team-role {
+  margin-top: 4px;
+  font-size: 0.82rem;
+  color: var(--text-500);
+}
+
+/* Info cards (location / contact / regulation) */
+.info-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* --------------------------------------------------------------------------
    Responsive: tablet (>= 768px)
    -------------------------------------------------------------------------- */
 @media (min-width: 768px) {
@@ -1059,6 +1366,39 @@ h6 {
 
   .proceso-subcard {
     padding: 24px;
+  }
+
+  .page-hero {
+    padding-block: 72px 56px;
+  }
+
+  .page-title {
+    font-size: 2.75rem;
+  }
+
+  .page-section {
+    padding-block: 48px;
+  }
+
+  .section-heading {
+    font-size: 1.8rem;
+  }
+
+  .steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px 24px;
+  }
+
+  .info-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cta-panel {
+    padding: 56px 40px;
   }
 }
 
@@ -1195,6 +1535,45 @@ h6 {
 
   .footer-bottom {
     text-align: left;
+  }
+
+  .page-hero {
+    padding-block: 88px 64px;
+  }
+
+  .page-hero--split .page-hero-grid {
+    grid-template-columns: 11fr 9fr;
+    gap: 48px;
+  }
+
+  .page-hero--split::before {
+    left: 28%;
+  }
+
+  .page-hero-media {
+    display: block;
+  }
+
+  .page-title {
+    font-size: 3.25rem;
+  }
+
+  .page-section {
+    padding-block: 56px;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .cards-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .team-avatar {
+    width: 120px;
+    height: 120px;
   }
 }
 
