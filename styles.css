@@ -489,6 +489,13 @@ h6 {
   font-size: 1.1rem;
   font-weight: 500;
   color: var(--text-300);
+  margin-bottom: 16px;
+}
+
+.hero-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-300);
   margin-bottom: 32px;
 }
 
