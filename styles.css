@@ -1138,11 +1138,16 @@ h6 {
   align-items: center;
 }
 
-/* Reserved for the platform image; takes no space until desktop */
+/* Platform mockup: stacked under the content on mobile, right column on desktop */
 .page-hero-media {
-  display: none;
-  min-height: 320px;
-  border-radius: var(--radius-card);
+  max-width: 440px;
+  margin-inline: auto;
+  margin-top: 8px;
+}
+
+.page-hero-media img {
+  width: 100%;
+  height: auto;
 }
 
 /* Generic page sections */
@@ -1281,6 +1286,12 @@ h6 {
   gap: 28px 16px;
 }
 
+/* Founders grid always stays 2-up and centered, regardless of breakpoint */
+.team-grid--founders {
+  max-width: 420px;
+  margin-inline: auto;
+}
+
 .team-member {
   display: flex;
   flex-direction: column;
@@ -1391,6 +1402,12 @@ h6 {
   .team-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 32px 24px;
+  }
+
+  .team-grid--founders {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 480px;
+    gap: 32px;
   }
 
   .info-cards {
@@ -1542,8 +1559,8 @@ h6 {
   }
 
   .page-hero--split .page-hero-grid {
-    grid-template-columns: 11fr 9fr;
-    gap: 48px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
   }
 
   .page-hero--split::before {
@@ -1551,7 +1568,15 @@ h6 {
   }
 
   .page-hero-media {
-    display: block;
+    max-width: none;
+    margin-top: 0;
+  }
+
+  /* Let the mockup render larger than its column; .page-hero clips overflow */
+  .page-hero-media img {
+    width: 112%;
+    max-width: none;
+    margin-left: -6%;
   }
 
   .page-title {
