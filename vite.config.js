@@ -11,8 +11,9 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
+        // index.html is the Plataforma page (site home).
         main: resolve(__dirname, 'index.html'),
-        plataforma: resolve(__dirname, 'plataforma.html'),
+        'front-plus': resolve(__dirname, 'front-plus.html'),
         asesoramiento: resolve(__dirname, 'asesoramiento.html'),
         'sobre-nosotros': resolve(__dirname, 'sobre-nosotros.html'),
       },

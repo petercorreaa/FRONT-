@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FRONT</title>
+  <title>Front | Plataforma de inversión online</title>
 
   <!-- Google Fonts: Space Grotesk (headings) + Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,18 +11,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
+
+  <link rel="icon" type="image/png" href="/assets/logo-symbol.png">
+  <link rel="apple-touch-icon" href="/assets/logo-symbol.png">
 </head>
 <body>
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
-      <a href="/" class="brand" aria-label="Front+, inicio">
-        <img src="/assets/front-plus-logo.png" alt="Front+" class="brand-logo" width="1896" height="558" />
+      <a href="/" class="brand" aria-label="Front, inicio">
+        <img src="/assets/front-logo.png" alt="Front" class="brand-logo" width="1490" height="558" />
       </a>
 
       <nav class="nav-desktop" aria-label="Navegación principal">
         <ul>
-          <li><a href="/plataforma.html">Plataforma</a></li>
-          <li><a href="/" aria-current="page">Front Plus</a></li>
+          <li><a href="/" aria-current="page">Plataforma</a></li>
+          <li><a href="/front-plus.html">Front Plus</a></li>
           <li><a href="/asesoramiento.html">Asesoramiento</a></li>
           <li><a href="/sobre-nosotros.html">Sobre Nosotros</a></li>
         </ul>
@@ -48,8 +51,8 @@
     <div class="mobile-menu" id="mobileMenu">
       <nav aria-label="Navegación móvil">
         <ul>
-          <li><a href="/plataforma.html">Plataforma</a></li>
-          <li><a href="/" aria-current="page">Front Plus</a></li>
+          <li><a href="/" aria-current="page">Plataforma</a></li>
+          <li><a href="/front-plus.html">Front Plus</a></li>
           <li><a href="/asesoramiento.html">Asesoramiento</a></li>
           <li><a href="/sobre-nosotros.html">Sobre Nosotros</a></li>
         </ul>
@@ -59,15 +62,14 @@
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="container hero-inner">
-        <div class="hero-left">
-          <div class="hero-panel glass" data-reveal>
-            <h1 id="hero-heading" class="hero-title">Front Plus</h1>
-            <p class="hero-subtitle">Innovación financiera</p>
-            <p class="hero-desc">Te ayudamos a mejorar tus decisiones de inversión con tecnología, informaciones y asesoramiento personalizado.</p>
-            <a href="#" class="btn-primary hero-cta">
-              Suscribite
+    <section class="page-hero page-hero--split" aria-labelledby="page-heading">
+      <div class="container page-hero-grid">
+        <div class="page-hero-content">
+          <h1 id="page-heading" class="page-title" data-reveal>Todo el mercado,<br>en un solo lugar.</h1>
+          <p class="page-desc" data-reveal>Creamos una plataforma que no solo te permite invertir, sino que también te brinda la mejor información financiera en tiempo real para ayudarte a tomar mejores decisiones de inversión. Te acompañamos con herramientas, análisis y contenido relevante para que puedas invertir de forma más simple, informada y segura.</p>
+          <div class="btn-row" data-reveal>
+            <a href="https://front.exchange/api/login" target="_blank" rel="noopener" class="btn-primary page-hero-cta">
+              Creá tu usuario gratis y aprendé a invertir
               <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
@@ -75,302 +77,64 @@
           </div>
         </div>
 
-        <div class="hero-right">
-          <div class="card-grid">
-            <div class="flip-card" role="button" tabindex="0" aria-pressed="false" aria-label="Alertas de compra. Tocá para ver más información." data-reveal>
-              <div class="flip-inner">
-                <div class="flip-front glass">
-                  <div class="card-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M6 8a6 6 0 1 1 12 0c0 3.5 1 5.5 2 7H4c1-1.5 2-3.5 2-7Z" />
-                      <path d="M10 19a2 2 0 0 0 4 0" />
-                    </svg>
-                  </div>
-                  <h2 class="card-title">Alertas de compra</h2>
-                  <p class="card-text">Recibí alertas de compra y venta de acciones para invertir a corto plazo.</p>
-                  <span class="flip-hint" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M4 4v5h5" />
-                      <path d="M4.5 9A8 8 0 0 1 19 9" />
-                      <path d="M20 20v-5h-5" />
-                      <path d="M19.5 15A8 8 0 0 1 5 15" />
-                    </svg>
-                    Ver más
-                  </span>
-                </div>
-                <div class="flip-back glass" aria-hidden="true">
-                  <h2 class="card-title">Alertas de compra</h2>
-                  <p class="card-text">Nuestro equipo analiza el mercado y te avisa el momento exacto para comprar o vender. Sin ruido, solo señales accionables directo a tu teléfono.</p>
-                  <span class="flip-hint">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M3 3v6h6" />
-                      <path d="M3.5 13a8.5 8.5 0 1 0 2.5-7.5L3 9" />
-                    </svg>
-                    Volver
-                  </span>
-                </div>
-              </div>
-            </div>
+        <div class="page-hero-media" data-reveal>
+          <img src="/assets/front-mockup.png" alt="La app de Front en dos teléfonos, mostrando el listado de instrumentos y el detalle de un CEDEAR" width="1536" height="1024" />
+        </div>
+      </div>
+    </section>
 
-            <div class="flip-card" role="button" tabindex="0" aria-pressed="false" aria-label="Herramienta AI. Tocá para ver más información." data-reveal>
-              <div class="flip-inner">
-                <div class="flip-front glass">
-                  <div class="card-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18" />
-                    </svg>
-                  </div>
-                  <h2 class="card-title">Herramienta AI</h2>
-                  <p class="card-text">Al ser parte de Plus, habilitás las funcionalidades AI dentro de la plataforma.</p>
-                  <span class="flip-hint" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M4 4v5h5" />
-                      <path d="M4.5 9A8 8 0 0 1 19 9" />
-                      <path d="M20 20v-5h-5" />
-                      <path d="M19.5 15A8 8 0 0 1 5 15" />
-                    </svg>
-                    Ver más
-                  </span>
-                </div>
-                <div class="flip-back glass" aria-hidden="true">
-                  <h2 class="card-title">Herramienta AI</h2>
-                  <p class="card-text">Analizá activos, comparás industrias y obtené resúmenes al instante con nuestra IA integrada, entrenada con datos financieros de primer nivel.</p>
-                  <span class="flip-hint">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M3 3v6h6" />
-                      <path d="M3.5 13a8.5 8.5 0 1 0 2.5-7.5L3 9" />
-                    </svg>
-                    Volver
-                  </span>
-                </div>
-              </div>
-            </div>
+    <section class="page-section" aria-labelledby="como-heading">
+      <div class="container">
+        <h2 id="como-heading" class="section-heading" data-reveal>¿Cómo te ayudamos a invertir?</h2>
+        <p class="section-sub" data-reveal>Te acompañamos con herramientas, análisis y contenido relevante para que puedas invertir de forma más simple, informada y segura.</p>
 
-            <div class="flip-card" role="button" tabindex="0" aria-pressed="false" aria-label="Cartera de acciones y CEDEARs. Tocá para ver más información." data-reveal>
-              <div class="flip-inner">
-                <div class="flip-front glass">
-                  <div class="card-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M3 17l9-4 9 4-9 4-9-4Z" />
-                      <path d="M3 12l9-4 9 4" />
-                    </svg>
-                  </div>
-                  <h2 class="card-title">Cartera de acciones y CEDEARs</h2>
-                  <p class="card-text">Todos los meses te enviamos nuestra selección para invertir a mediano y largo plazo.</p>
-                  <span class="flip-hint" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M4 4v5h5" />
-                      <path d="M4.5 9A8 8 0 0 1 19 9" />
-                      <path d="M20 20v-5h-5" />
-                      <path d="M19.5 15A8 8 0 0 1 5 15" />
-                    </svg>
-                    Ver más
-                  </span>
-                </div>
-                <div class="flip-back glass" aria-hidden="true">
-                  <h2 class="card-title">Cartera de acciones y CEDEARs</h2>
-                  <p class="card-text">Accedé a una cartera curada y rebalanceada mensualmente por especialistas, pensada para hacer crecer tu capital de forma consistente.</p>
-                  <span class="flip-hint">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M3 3v6h6" />
-                      <path d="M3.5 13a8.5 8.5 0 1 0 2.5-7.5L3 9" />
-                    </svg>
-                    Volver
-                  </span>
-                </div>
-              </div>
+        <div class="cards-3">
+          <div class="feature-card glass" data-reveal>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4a16 16 0 0 1 16 16" />
+                <path d="M4 10a10 10 0 0 1 10 10" />
+                <circle cx="5" cy="19" r="1.5" fill="currentColor" stroke="none" />
+              </svg>
             </div>
-
-            <div class="flip-card" role="button" tabindex="0" aria-pressed="false" aria-label="Asistencia personalizada. Tocá para ver más información." data-reveal>
-              <div class="flip-inner">
-                <div class="flip-front glass">
-                  <div class="card-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M4 13v-1a8 8 0 0 1 16 0v1" />
-                      <path d="M4 13a2 2 0 0 1 2-2h1v6H6a2 2 0 0 1-2-2v-2Z" />
-                      <path d="M20 13a2 2 0 0 0-2-2h-1v6h1a2 2 0 0 0 2-2v-2Z" />
-                      <path d="M16 19a2 2 0 0 1-2 2h-1" />
-                    </svg>
-                  </div>
-                  <h2 class="card-title">Asistencia personalizada</h2>
-                  <p class="card-text">Recibí asistencia 24/7 por mail y WhatsApp para revisar tus inversiones.</p>
-                  <span class="flip-hint" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M4 4v5h5" />
-                      <path d="M4.5 9A8 8 0 0 1 19 9" />
-                      <path d="M20 20v-5h-5" />
-                      <path d="M19.5 15A8 8 0 0 1 5 15" />
-                    </svg>
-                    Ver más
-                  </span>
-                </div>
-                <div class="flip-back glass" aria-hidden="true">
-                  <h2 class="card-title">Asistencia personalizada</h2>
-                  <p class="card-text">Un asesor real disponible cuando lo necesites, por mail y WhatsApp, para acompañarte en cada decisión de inversión.</p>
-                  <span class="flip-hint">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M3 3v6h6" />
-                      <path d="M3.5 13a8.5 8.5 0 1 0 2.5-7.5L3 9" />
-                    </svg>
-                    Volver
-                  </span>
-                </div>
-              </div>
-            </div>
+            <h3 class="card-title">Feed interactivo</h3>
+            <p class="card-text">En Front encontrás las principales noticias y tendencias que están moviendo los mercados en tiempo real. Además, podés seguir a otros inversores, conocer sus estrategias y descubrir en qué activos están invirtiendo.</p>
           </div>
 
-          <!-- Placeholder downloads: create an empty /pdfs/ folder with alertas.pdf and cartera.pdf -->
-          <div class="download-row">
-            <a href="/pdfs/alertas.pdf" download class="download-bar glass" data-reveal>
-              <span class="download-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" />
-                  <path d="M14 3v5h5" />
-                </svg>
-              </span>
-              <span class="download-label">Mirá nuestras últimas alertas</span>
-              <span class="download-arrow">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M12 4v10" />
-                  <path d="M8 10l4 4 4-4" />
-                  <path d="M4 18h16" />
-                </svg>
-              </span>
-            </a>
+          <div class="feature-card glass" data-reveal>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18" />
+              </svg>
+            </div>
+            <h3 class="card-title">Asistentes AI</h3>
+            <p class="card-text">Personalizamos grandes inversores mediante inteligencia artificial para analizar tus inversiones y ayudarte antes de invertir. Nuestros asistentes comparan tu perfil y objetivos con cada activo financiero para evaluar si es adecuado para vos.</p>
+          </div>
 
-            <a href="/pdfs/cartera.pdf" download class="download-bar glass" data-reveal>
-              <span class="download-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" />
-                  <path d="M14 3v5h5" />
-                </svg>
-              </span>
-              <span class="download-label">Mirá nuestra última cartera</span>
-              <span class="download-arrow">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M12 4v10" />
-                  <path d="M8 10l4 4 4-4" />
-                  <path d="M4 18h16" />
-                </svg>
-              </span>
-            </a>
+          <div class="feature-card glass" data-reveal>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8L12 3Z" />
+              </svg>
+            </div>
+            <h3 class="card-title">Front PLUS</h3>
+            <p class="card-text">Accedé a reportes exclusivos, alertas de mercado, carteras recomendadas y asistencia personalizada para tomar mejores decisiones de inversión y mejorar tus resultados.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="stats" aria-label="Front+ en números">
-      <div class="container stats-inner">
-        <div class="stat" data-reveal>
-          <span class="stat-number" data-target="75000" data-prefix="+">+0</span>
-          <span class="stat-label">cuentas invirtiendo</span>
-        </div>
-        <div class="stat" data-reveal>
-          <span class="stat-number" data-target="2000" data-prefix="+">+0</span>
-          <span class="stat-label">usuarios Plus</span>
-        </div>
-        <div class="stat" data-reveal>
-          <span class="stat-number" data-target="10000" data-prefix="+">+0</span>
-          <span class="stat-label">millones administrados</span>
-        </div>
-        <div class="stat" data-reveal>
-          <span class="stat-number" data-target="5">0</span>
-          <span class="stat-label">brokers financieros conectados</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="proceso" aria-labelledby="proceso-heading">
-      <div class="container proceso-inner">
-        <h2 id="proceso-heading" class="proceso-heading" data-reveal>Nuestro proceso para ayudarte a invertir mejor.</h2>
-
-        <div class="proceso-intro glass" data-reveal>
-          <p>Combinamos tecnología con múltiples fuentes de información para crear carteras de inversión y analizar múltiples activos e industrias.</p>
-        </div>
-
-        <div class="proceso-flow" aria-hidden="true">
-          <span class="proceso-connector"></span>
-          <span class="proceso-badge proceso-badge--violet">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 4v14" />
-              <path d="M6 12l6 6 6-6" />
+    <section class="page-section" aria-labelledby="registro-heading">
+      <div class="container">
+        <div class="cta-panel glass" data-reveal>
+          <h2 id="registro-heading">Registrate GRATIS</h2>
+          <p>Creá tu usuario, completá tus datos personales y habilitá tu cuenta de inversión regulada por la CNV.</p>
+          <a href="https://front.exchange/api/login" target="_blank" rel="noopener" class="btn-primary">
+            Acceder a nuestra plataforma
+            <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-          </span>
-          <span class="proceso-connector"></span>
-          <span class="proceso-badge proceso-badge--green">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 20V6" />
-              <path d="M6 12l6-6 6 6" />
-            </svg>
-          </span>
-          <span class="proceso-connector"></span>
-        </div>
-
-        <div class="proceso-columns">
-          <div class="proceso-col" data-reveal>
-            <h3 class="proceso-col-title proceso-col-title--violet">Nuestra Plataforma</h3>
-            <p class="proceso-col-text">Con nuestra plataforma, podés invertir en todos los instrumentos financieros del mercado y usar IA para mejorar tus decisiones.</p>
-
-            <div class="proceso-subcards">
-              <div class="proceso-subcard glass">
-                <div class="proceso-subcard-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M4 19V9M10 19V5M16 19v-7M21 19H3" />
-                  </svg>
-                </div>
-                <p>Operá desde nuestra plataforma todos los instrumentos financieros del mercado y mirá dónde otros inversores están invirtiendo.</p>
-              </div>
-
-              <div class="proceso-subcard glass">
-                <div class="proceso-subcard-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M4 4a16 16 0 0 1 16 16" />
-                    <path d="M4 10a10 10 0 0 1 10 10" />
-                    <circle cx="5" cy="19" r="1.5" fill="currentColor" stroke="none" />
-                  </svg>
-                </div>
-                <p>Contamos con un feed interactivo donde ves las noticias más importantes para mantenerte actualizado.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="proceso-divider" aria-hidden="true"></div>
-
-          <div class="proceso-col" data-reveal>
-            <h3 class="proceso-col-title proceso-col-title--green">Nuestro asesoramiento</h3>
-            <p class="proceso-col-text">Con nuestro plan de suscripción, obtenés asesoramiento e información para tomar las mejores decisiones de inversión.</p>
-
-            <div class="proceso-subcards">
-              <div class="proceso-subcard glass">
-                <div class="proceso-subcard-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M3 17l6-6 4 4 8-8" />
-                    <path d="M15 7h6v6" />
-                  </svg>
-                </div>
-                <p>Mejorá tus rendimientos de la mano de información precisa del mercado.</p>
-              </div>
-
-              <div class="proceso-subcard glass">
-                <div class="proceso-subcard-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M4 5h16v11H8l-4 4V5Z" />
-                    <path d="M8 9h8M8 12h5" />
-                  </svg>
-                </div>
-                <p>Asesorate con nuestro asistente AI o con alguno de nuestros asesores para lograr inversiones acordes a tus objetivos.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="proceso-bottom" data-reveal>
-          <p class="proceso-bottom-text">Nos nutrimos de las mejores plataformas de información financiera para tomar mejores decisiones.</p>
-          <div class="logo-row">
-            <span class="logo-item">FactSet</span>
-            <span class="logo-item">Bloomberg</span>
-            <span class="logo-item">Reuters</span>
-          </div>
+          </a>
         </div>
       </div>
     </section>
@@ -380,15 +144,16 @@
     <div class="container">
       <div class="footer-top" data-reveal>
         <div class="footer-brand">
-          <a href="/" class="brand" aria-label="Front+, inicio">
-            <img src="/assets/front-plus-logo.png" alt="Front+" class="brand-logo" width="1896" height="558" />
+          <a href="/" class="brand" aria-label="Front, inicio">
+            <img src="/assets/front-logo.png" alt="Front" class="brand-logo" width="1490" height="558" />
           </a>
           <p class="footer-tagline">Innovación financiera para inversores argentinos.</p>
         </div>
 
         <nav class="footer-nav" aria-label="Enlaces de pie de página">
           <ul>
-            <li><a href="/plataforma.html">Plataforma</a></li>
+            <li><a href="/">Plataforma</a></li>
+            <li><a href="/front-plus.html">Front Plus</a></li>
             <li><a href="/asesoramiento.html">Asesoramiento</a></li>
             <li><a href="/sobre-nosotros.html">Sobre Nosotros</a></li>
           </ul>
@@ -396,7 +161,8 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Front+. Todos los derechos reservados.</p>
+        <img src="/assets/logo-symbol.png" alt="" class="footer-symbol" width="24" height="24" />
+        <p>&copy; 2026 Front. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>

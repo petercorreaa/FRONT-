@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre Nosotros — Front+</title>
+  <title>Sobre Nosotros — Front</title>
 
   <!-- Google Fonts: Space Grotesk (headings) + Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +11,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
+
+  <link rel="icon" type="image/png" href="/assets/logo-symbol.png">
+  <link rel="apple-touch-icon" href="/assets/logo-symbol.png">
 </head>
 <body>
   <header class="site-header" id="siteHeader">
@@ -21,8 +24,8 @@
 
       <nav class="nav-desktop" aria-label="Navegación principal">
         <ul>
-          <li><a href="/plataforma.html">Plataforma</a></li>
-          <li><a href="/">Front Plus</a></li>
+          <li><a href="/">Plataforma</a></li>
+          <li><a href="/front-plus.html">Front Plus</a></li>
           <li><a href="/asesoramiento.html">Asesoramiento</a></li>
           <li><a href="/sobre-nosotros.html" aria-current="page">Sobre Nosotros</a></li>
         </ul>
@@ -48,8 +51,8 @@
     <div class="mobile-menu" id="mobileMenu">
       <nav aria-label="Navegación móvil">
         <ul>
-          <li><a href="/plataforma.html">Plataforma</a></li>
-          <li><a href="/">Front Plus</a></li>
+          <li><a href="/">Plataforma</a></li>
+          <li><a href="/front-plus.html">Front Plus</a></li>
           <li><a href="/asesoramiento.html">Asesoramiento</a></li>
           <li><a href="/sobre-nosotros.html" aria-current="page">Sobre Nosotros</a></li>
         </ul>
@@ -61,7 +64,6 @@
   <main>
     <section class="page-hero" aria-labelledby="page-heading">
       <div class="container">
-        <span class="page-eyebrow" data-reveal>Sobre Nosotros</span>
         <h1 id="page-heading" class="page-title" data-reveal>Las personas<br>detrás de Front+.</h1>
         <p class="page-desc" data-reveal>Nacimos en Buenos Aires con una misión simple: que invertir bien deje de ser un privilegio. Combinamos tecnología y experiencia financiera para acompañar a miles de inversores argentinos, todos los días.</p>
       </div>
@@ -74,12 +76,12 @@
 
         <div class="team-grid team-grid--founders">
           <div class="team-member" data-reveal>
-            <div class="team-avatar" role="img" aria-label="Foto de Alan Mac Carthy"></div>
+            <img class="team-avatar" src="/assets/alan-mac-carthy.webp" alt="Foto de Alan Mac Carthy" width="240" height="240" loading="lazy" />
             <span class="team-name">Alan Mac Carthy</span>
             <span class="team-role">CEO</span>
           </div>
           <div class="team-member" data-reveal>
-            <div class="team-avatar" role="img" aria-label="Foto de Tomas Mac Carthy"></div>
+            <img class="team-avatar" src="/assets/tomas-mac-carthy.webp" alt="Foto de Tomas Mac Carthy" width="137" height="137" loading="lazy" />
             <span class="team-name">Tomas Mac Carthy</span>
             <span class="team-role">CTO</span>
           </div>
@@ -94,23 +96,23 @@
 
         <div class="team-grid">
           <div class="team-member" data-reveal>
-            <div class="team-avatar" role="img" aria-label="Foto de Julian Cohen"></div>
+            <img class="team-avatar" src="/assets/julian-cohen.webp" alt="Foto de Julian Cohen" width="200" height="200" loading="lazy" />
             <span class="team-name">Julian Cohen</span>
             <span class="team-role">Ex CEO Grupo Cohen</span>
           </div>
           <div class="team-member" data-reveal>
-            <div class="team-avatar" role="img" aria-label="Foto de Alejandro Bedoya"></div>
+            <img class="team-avatar" src="/assets/alejandro-bedoya.webp" alt="Foto de Alejandro Bedoya" width="240" height="240" loading="lazy" />
             <span class="team-name">Alejandro Bedoya</span>
             <span class="team-role">Ex Gerente General Banco de Valores</span>
           </div>
           <div class="team-member" data-reveal>
-            <div class="team-avatar" role="img" aria-label="Foto de Sebastian Gryngarten"></div>
+            <img class="team-avatar" src="/assets/sebastian-gryngarten.webp" alt="Foto de Sebastian Gryngarten" width="240" height="240" loading="lazy" />
             <span class="team-name">Sebastian Gryngarten</span>
             <span class="team-role">Ex Country Manager GlobalLogic</span>
           </div>
           <div class="team-member" data-reveal>
-            <div class="team-avatar" role="img" aria-label="Foto de Jose Vignioli"></div>
-            <span class="team-name">Jose Vignioli</span>
+            <img class="team-avatar" src="/assets/jose-vignoli.webp" alt="Foto de Jose Vignoli" width="240" height="240" loading="lazy" />
+            <span class="team-name">Jose Vignoli</span>
             <span class="team-role">Ex CEO Invertir Online</span>
           </div>
         </div>
@@ -158,7 +160,7 @@
         <div class="cta-panel glass" data-reveal>
           <h2 id="valores-heading">Cercanía, transparencia y educación financiera</h2>
           <p>Creemos que la mejor inversión empieza por entender lo que hacés con tu plata. Por eso, además de asesorarte, te enseñamos.</p>
-          <a href="/plataforma.html" class="btn-primary">
+          <a href="/" class="btn-primary">
             Conocé nuestra plataforma
             <svg class="icon-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true">
               <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
@@ -181,7 +183,8 @@
 
         <nav class="footer-nav" aria-label="Enlaces de pie de página">
           <ul>
-            <li><a href="/plataforma.html">Plataforma</a></li>
+            <li><a href="/">Plataforma</a></li>
+            <li><a href="/front-plus.html">Front Plus</a></li>
             <li><a href="/asesoramiento.html">Asesoramiento</a></li>
             <li><a href="/sobre-nosotros.html">Sobre Nosotros</a></li>
           </ul>
@@ -189,7 +192,8 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Front+. Todos los derechos reservados.</p>
+        <img src="/assets/logo-symbol.png" alt="" class="footer-symbol" width="24" height="24" />
+        <p>&copy; 2026 Front. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>
