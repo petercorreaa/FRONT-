@@ -1334,6 +1334,7 @@ h6 {
   margin-bottom: 14px;
   border-radius: 50%;
   object-fit: cover;
+  filter: grayscale(100%);
   /* Gray placeholder shown while the photo loads */
   background: linear-gradient(160deg, #565261 0%, #37343f 100%);
   border: 1px solid var(--glass-border);
