@@ -959,17 +959,19 @@ h6 {
 }
 
 .logo-item {
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: 0.02em;
-  color: var(--text-500);
+  display: block;
+  height: 22px;
+  width: auto;
   opacity: 0.55;
-  transition: opacity 0.25s ease, color 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+
+/* Reuters' mark reads smaller than FactSet/Bloomberg at the same height, so bump it slightly */
+.logo-item--reuters {
+  height: 27px;
 }
 
 .logo-item:hover {
-  color: var(--text-100);
   opacity: 1;
 }
 
